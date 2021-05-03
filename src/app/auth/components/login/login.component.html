@@ -1,0 +1,9 @@
+<form (submit)="onSubmit()" [formGroup]="loginForm">
+    <label for="uname">UserName:</label>
+    <input id="uname" type="text" formControlName="username">
+    <br>
+    <label for="pass">Pass:</label>
+    <input id="pass" type="password" formControlName="password">
+
+    <input type="submit" value="Login" [disabled]="!loginForm.valid">
+</form>

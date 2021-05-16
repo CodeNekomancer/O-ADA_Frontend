@@ -10,7 +10,7 @@ export class UniverseService {
 
   
   private BASEURL = environment.baseUrl;
-  private endPoint = 'Universe';
+  private endPoint = 'universe';
 
   constructor(private _http:HttpClient) { }
 

@@ -8,8 +8,8 @@ import {environment} from 'src/environments/environment'
 export class AuthService {
 
   private BASEURL = environment.baseUrl;
-  private authEndpoint = 'auth/login';
-  private registerEndpoint = 'ADAcc/add';
+  private authEndpoint = 'adacc/login';
+  private registerEndpoint = 'adacc/add';
   constructor(private _http:HttpClient) { }
   login(user:any):Observable<any>{
     return this._http.post(`${this.BASEURL}${this.authEndpoint}`, JSON.stringify(user))

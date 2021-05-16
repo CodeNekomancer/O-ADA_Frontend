@@ -13,6 +13,10 @@ const routes:Routes = [
     path:'home',
     component: MultiverseViewComponent,
     resolve:{patata:UniverseResolverService}
+  },
+  {
+    path: '**',
+    redirectTo: 'home'
   }
 ]
 @NgModule({

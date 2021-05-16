@@ -1,9 +1,20 @@
-<form (submit)="onSubmit()" [formGroup]="loginForm">
-    <label for="uname">UserName:</label>
-    <input id="uname" type="text" formControlName="username">
-    <br>
-    <label for="pass">Pass:</label>
-    <input id="pass" type="password" formControlName="password">
-
-    <input type="submit" value="Login" [disabled]="!loginForm.valid">
-</form>
+<main class="baseScreen">
+    <div class="alphaCard card card-body text-white">
+        <form (submit)="onSubmit()" [formGroup]="loginForm">
+            <label for="uname">UserName:</label>
+            <input id="uname" type="text" formControlName="username">
+            <br>
+            <label for="pass">Pass:</label>
+            <input id="pass" type="password" formControlName="password">
+        
+            <input type="submit" value="Login" [disabled]="!loginForm.valid">
+        </form>
+    </div>
+    <div class="card text-white bg-dark mb-3">
+        <div class="card-header">Register</div>
+        <div class="card-body">
+            <h5 class="card-title">Dark card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div>
+</main>

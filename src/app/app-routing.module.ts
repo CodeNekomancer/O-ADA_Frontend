@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path:'universe',
     loadChildren: ()=>import('./universe/universe.module').then(m=>m.UniverseModule),
+  },
+  {
+    path:'**',
+    redirectTo:'auth'
   }
 ];
 

@@ -13,27 +13,60 @@
 }
 
 .pseudoButton{
-    display: flex;
-    flex-flow: row-reverse;
-    height: 1em;
-    background-color:rgba(0, 0, 5, 0.5);
-    border-width: 1px;
-    border-style: solid;
-    border: #c0c0c0;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+
+  width: 20em;
+  height: fit-content;
+  background-color:rgba(31, 31, 31, 0.486);
+  border-width: 1px;
+
+  margin-right: 10em;
+  align-self: center;
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+
+  border: 1px solid rgb(88, 88, 88);
+  border-radius: 0.25em;
+}
+
+.pseudoButton>*{
+  margin: 0.2em 0em;
 }
 
 .logo{
-    @import url('http://fonts.cdnfonts.com/css/astron-boy');
-    font-family: 'Astron Boy Wonder';
-    font-size: 3.8em;
-    color: rgb(0, 87, 158);
+  -webkit-user-select: none;       
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+  @import url('http://fonts.cdnfonts.com/css/astron-boy');
+  font-family: 'Astron Boy Wonder';
+  font-size: 3.8em;
+  color: rgb(185, 190, 255);
+  text-shadow: 0 0 5px rgb(47, 13, 199), 0 0 10px rgb(22, 25, 179),
+    0 0 15px #FFF, 0 0 20px rgb(13, 54, 189),
+    0 0 30px rgb(5, 26, 94), 0 0 40px rgb(10, 29, 92),
+    0 0 55px rgb(13, 54, 189), 0 0 75px rgb(13, 54, 189);
 }
 
 .logoBIG{
+  -webkit-user-select: none;       
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
     @import url('http://fonts.cdnfonts.com/css/astron-boy');
     font-family: 'Astron Boy Wonder';
     font-size: 15em;
-    color: rgb(0, 87, 158);
+    color: rgb(185, 190, 255);
+    text-shadow: 0 0 5px rgb(47, 13, 199), 0 0 10px rgb(22, 25, 179),
+    0 0 15px #FFF, 0 0 20px rgb(13, 54, 189),
+    0 0 30px rgb(5, 26, 94), 0 0 40px rgb(10, 29, 92),
+    0 0 55px rgb(13, 54, 189), 0 0 75px rgb(13, 54, 189);
 }
 
 .adaccDisplayContainer{
@@ -417,5 +450,120 @@
 
 }
 
+$color: #0094fd;
+$size: 0.25em;
+$time: 5;
 
+.loadyFixer{
+  display: flex;
+  flex-direction: row-reverse;  
+}
 
+.dank-ass-loader {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-right: 0.6em;
+
+   .row {
+      display: flex;
+   }
+}
+
+.arrow {
+   width: 0; 
+   height: 0;
+   margin: 0 (-$size / 2);
+   border-left: $size solid transparent;
+   border-right: $size solid transparent;
+   border-bottom: ($size * 1.8) solid $color;
+   animation: blink $time + s infinite;
+   filter: drop-shadow(0 0 ($size * 1.5) $color);
+    
+   &.down {
+      transform: rotate(180deg);
+   }
+   
+   @for $i from 1 through 18 {
+      &.outer-#{$i} {
+         animation-delay: -($time / 18) * $i + s;
+      }  
+   }
+
+   @for $i from 1 through 6 {
+      &.inner-#{$i} {
+         animation-delay: -($time / 6) * $i + s;
+      }  
+   }  
+}
+
+@keyframes blink {
+  0% { opacity: 0.1; }
+  30% { opacity: 1; }
+  100% { opacity: 0.1; }
+}
+
+.transparentameEsta{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+label{
+    display:flex;
+    flex-direction:column;
+    width:70px;
+    cursor:pointer;
+  }
+  
+  label span{
+    background: #fff;
+    border-radius:0.2em;
+    height:0.3em;
+    margin: 7px 0;
+    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  
+  }
+  
+  
+  span:nth-of-type(1){
+    width:50%;
+    
+  }
+  
+  span:nth-of-type(2){
+    width:100%;
+  }
+  
+  
+  span:nth-of-type(3){
+    width:75%;
+    
+  }
+  
+  
+  input[type="checkbox"]{
+    display:none;
+  }
+  
+  
+  input[type="checkbox"]:checked ~ span:nth-of-type(1){
+    transform-origin:bottom;
+    transform:rotatez(45deg) translate(8px,0px)
+  }
+  
+  
+  input[type="checkbox"]:checked ~ span:nth-of-type(2){
+    
+    transform-origin:top;
+    transform:rotatez(-45deg)
+  }
+  
+  
+  input[type="checkbox"]:checked ~ span:nth-of-type(3){
+    
+    transform-origin:bottom;
+    width:50%;
+    transform: translate(30px,-7px) rotatez(45deg);
+  
+  }
+  

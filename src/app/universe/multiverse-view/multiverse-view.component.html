@@ -1,11 +1,12 @@
 <app-header></app-header>
 <main>
-    <div class="card" style="width: 18rem;">
+    <div *ngFor="let item of multiverseData" class="card" style="width: 18rem;">
         <img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2020/12/oldest-galaxy-in-the-Universe.jpg" class="card-img-top" alt="sampleText">
         <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">
+                {{item.domain}}
+            </p>
         </div>
     </div>
     <router-outlet></router-outlet>
-    <pre>{{multiverseData | json}}</pre>
 </main>

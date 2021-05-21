@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl:'https://o-ada.herokuapp.com/'
+  baseUrl:'https://oada-api.herokuapp.com/'
 };
 
 /*

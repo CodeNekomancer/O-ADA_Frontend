@@ -1,12 +1,5 @@
 <app-header></app-header>
 <main>
-    <div *ngFor="let item of multiverseData" class="card" style="width: 18rem;">
-        <img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2020/12/oldest-galaxy-in-the-Universe.jpg" class="card-img-top" alt="sampleText">
-        <div class="card-body">
-            <p class="card-text">
-                {{item.domain}}
-            </p>
-        </div>
-    </div>
-    <router-outlet></router-outlet>
+    <h1>universe list</h1>
+    <app-grid-card [universeList]="multiverseData"></app-grid-card>
 </main>

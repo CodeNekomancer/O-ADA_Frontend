@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MultiverseViewComponent } from './multiverse-view/multiverse-view.component';
+import { MultiverseViewComponent } from './components/multiverse-view/multiverse-view.component';
 import { UniverseResolverService } from './resolvers/universe-resolver.service';
 
 const routes:Routes = [

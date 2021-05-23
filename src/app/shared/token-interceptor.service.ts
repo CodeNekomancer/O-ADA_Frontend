@@ -15,7 +15,9 @@ export class TokenInterceptorService implements HttpInterceptor{
 
     //get request
     const request = req.clone({
-      headers: req.headers.set('Content-Type','application/json')
+      setHeaders:{
+        'Content-Type':'application/json'
+      } 
     })
     
     //return if null, undefined
@@ -23,10 +25,15 @@ export class TokenInterceptorService implements HttpInterceptor{
       return next.handle(request);
     }
 
-    //add token
-    request.headers.append('Authorization',`Bearer ${token}`);
+    const request2 = req.clone({
+      setHeaders:{
+        'Content-Type':'application/json',
+        Authorization:`Bearer ${token}`
+      } 
+    })
+   
     
     //send request
-    return next.handle(request)
+    return next.handle(request2)
   }
 }

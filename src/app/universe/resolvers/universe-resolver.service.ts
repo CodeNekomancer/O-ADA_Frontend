@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { forkJoin } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { UniverseService } from '../services/universe.service';
 
 @Injectable({
@@ -14,13 +14,12 @@ export class UniverseResolverService implements Resolve<any> {
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     const params  = {}
     const $universes = this._universeService.search(params);
-    return forkJoin($universes).pipe(map(
+    const $myUniverses = this._universeService.getMyUniverses();
+    return forkJoin($universes, $myUniverses).pipe(map(
       (res)=>{
-        console.log(res)
         return {
-          multiverse:[
-            res[0]
-          ]
+          multiverse:res[0],
+          myUniverses: res[1]
         }
       },
       (error)=>{

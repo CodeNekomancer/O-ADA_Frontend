@@ -11,6 +11,7 @@ export class GridCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.universeList)
   }
 
 }

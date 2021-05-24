@@ -8,13 +8,13 @@ import {environment} from 'src/environments/environment'
 export class AuthService {
 
   private BASEURL = environment.baseUrl;
-  private authEndpoint = 'adacc/login';
+  private authEndpoint = 'adacc/';
   private registerEndpoint = 'adacc/add';
   constructor(private _http:HttpClient) { }
   login(user:any):Observable<any>{
-    return this._http.post(`${this.BASEURL}${this.authEndpoint}`, JSON.stringify(user))
+    return this._http.post(`${this.BASEURL}${this.authEndpoint}login`, JSON.stringify(user))
   } 
-  register(){
-
+  register(user:any):Observable<any>{
+    return this._http.post(`${this.BASEURL}${this.authEndpoint}add`, JSON.stringify(user))
   }
 }

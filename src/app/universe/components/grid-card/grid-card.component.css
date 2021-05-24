@@ -7,7 +7,8 @@
 }
 
 .adaContainer .card {
-  max-width: 20em;
+  max-width: 18em;
+  min-height: 24em;
   cursor: pointer;
   border: 1px solid #797979;
   background-color: black;

@@ -1,0 +1,61 @@
+.logoBIG{
+    -webkit-user-select: none;       
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    @import url('http://fonts.cdnfonts.com/css/astron-boy');
+    font-family: 'Astron Boy Wonder';
+    font-size: 14em;
+    color: rgb(185, 190, 255);
+    text-align: center;
+    padding-top: 0.75em;
+    text-shadow: 0 0 5px rgb(47, 13, 199), 0 0 10px rgb(22, 25, 179),
+    0 0 15px #FFF, 0 0 20px rgb(13, 54, 189),
+    0 0 30px rgb(5, 26, 94), 0 0 40px rgb(10, 29, 92),
+    0 0 55px rgb(13, 54, 189), 0 0 75px rgb(13, 54, 189);
+  }
+
+h3 {
+    font-size: 1em;
+    color: rgb(185, 190, 255);
+    text-align: center;
+    letter-spacing: 0.15em;
+}
+
+.buttbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    padding: 0.1em;
+    transform: translate(-50%, -50%);
+}
+
+.mabox {
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    margin: 5%;
+    width: 40%;    
+    height: 2em;
+    text-align: center;
+    padding: 0px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+    background: #0c0c0cea;
+}
+
+.mabox:hover {
+    background: #1e1c7cea;
+    color: rgb(173, 173, 173);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #1412bbea,
+                0 0 25px #1412bbea,
+                0 0 50px #1412bbea,
+                0 0 100px #1412bbea;
+}

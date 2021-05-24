@@ -1,16 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+
+body {
     background-image: url('https://www.juegaenred.com/wp-content/uploads/2019/10/OGame-Wallpapers-2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
-    padding:0;
-    margin:0;
-
+    padding: 0;
+    margin: 0;
     font-family: 'Xolonium';
+    color: rgb(196, 196, 196);
 }
 
-.fogDiv{
+.fogDiv {
     background-color: rgba(0, 0, 5, 0.850);
+    height: 100vh;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Xolonium';
+    src: url('assets/Xolonium-webfont/Xolonium.woff');
+}
+
+@font-face {
+    font-family: 'Astron Boy Wonder';
+    src: url('assets/AstronBoy-webfont/AstronBoy_wonder.woff')
 }

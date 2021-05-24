@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'auth',
+    redirectTo:'home',
     pathMatch:'full'
   },
   {
@@ -17,8 +17,12 @@ const routes: Routes = [
     loadChildren: ()=>import('./universe/universe.module').then(m=>m.UniverseModule),
   },
   {
+    path:'home',
+    loadChildren: ()=>import('./landing/landing.module').then(m=>m.LandingModule),
+  },
+  {
     path:'**',
-    redirectTo:'auth'
+    redirectTo:'home'
   }
 ];
 

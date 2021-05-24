@@ -1,12 +1,10 @@
-<app-header></app-header>
-<main>
-    <div *ngFor="let item of multiverseData" class="card" style="width: 18rem;">
+<div class="adaContainer">
+    <div *ngFor="let universe of universeList" class="card" routerLink="">
         <img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2020/12/oldest-galaxy-in-the-Universe.jpg" class="card-img-top" alt="sampleText">
         <div class="card-body">
             <p class="card-text">
-                {{item.domain}}
+                {{universe.serverId}}
             </p>
         </div>
     </div>
-    <router-outlet></router-outlet>
-</main>
+</div>

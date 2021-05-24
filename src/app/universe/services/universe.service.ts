@@ -15,12 +15,15 @@ export class UniverseService {
   constructor(private _http:HttpClient) { }
 
   search(params:any):Observable<any>{
-    return this._http.get(`${this.BASEURL}${this.endPoint}/getUnvierseMult`, {params:new HttpParams({fromObject:params})})
+    return this._http.get(`${this.BASEURL}${this.endPoint}/get/pag`, {params:new HttpParams({fromObject:params})})
   }
   create(){
 
   }
   update(){
 
+  }
+  getMyUniverses():Observable<any>{
+    return this._http.get(`https://oada-api.herokuapp.com/universe/get/own`);
   }
 }

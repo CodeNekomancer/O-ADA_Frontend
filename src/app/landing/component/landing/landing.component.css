@@ -1,0 +1,12 @@
+@import url("http://fonts.cdnfonts.com/css/astron-boy");
+.logoBIG {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Astron Boy Wonder';
+  font-size: 14em;
+  color: #b9beff;
+  text-align: center;
+  text-shadow: 0 0 5px #2f0dc7, 0 0 10px #1619b3, 0 0 15px #FFF, 0 0 20px #0d36bd, 0 0 30px #051a5e, 0 0 40px #0a1d5c, 0 0 55px #0d36bd, 0 0 75px #0d36bd;
+}

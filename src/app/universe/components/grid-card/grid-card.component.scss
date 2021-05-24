@@ -5,7 +5,11 @@
     gap: 0.75em;
     flex-wrap: wrap;
     .card {
-        max-width: 20em;
+        max-width: 18em;
+        min-height: 24em;
         cursor: pointer;
+        border: 1px solid rgb(121, 121, 121);
+        background-color: black;
+        color: white;
     }
 }

@@ -24,6 +24,6 @@ export class UniverseService {
 
   }
   getMyUniverses():Observable<any>{
-    return this._http.get(`https://oada-api.herokuapp.com/universe/get/own`);
+    return this._http.get(`${this.BASEURL}uacc/get/own`);
   }
 }

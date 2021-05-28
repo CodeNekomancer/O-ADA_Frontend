@@ -317,10 +317,8 @@
 
 .hex-content .title {
     display: block;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 24px;
+    text-align: center;
+    font-size: 0.75em;
     text-transform: uppercase; 
 }
     
@@ -522,4 +520,8 @@ label{
     transform: translate(30px,-7px) rotatez(45deg);
   
   }
-  
+
+img {
+  height: 6em;
+  translate: -0.5em -0.5em;
+}

@@ -1,1 +1,1 @@
-.adaContainer{width:100%;margin:0;display:flex;gap:0.75em;flex-wrap:wrap}.adaContainer .card{max-width:20em;cursor:pointer;border:1px solid #797979;background-color:black;color:white}
+.adaContainer{width:100%;margin:0;display:flex;gap:0.75em;flex-wrap:wrap}.adaContainer .card{max-width:18em;min-height:24em;cursor:pointer;border:1px solid #797979;background-color:black;color:white}

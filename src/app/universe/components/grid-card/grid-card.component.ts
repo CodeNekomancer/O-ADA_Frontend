@@ -12,6 +12,12 @@ export class GridCardComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.universeList)
+    var newarray = new Array;
+    if (this.universeList[0].itsUniverse != undefined) {
+      this.universeList.forEach(element => {
+        newarray.push(element.itsUniverse)
+      });
+      this.universeList = newarray;
+    }
   }
-
 }

@@ -20,8 +20,13 @@
     "@angular/platform-browser-dynamic": "~8.2.4",
     "@angular/router": "~8.2.4",
     "@popperjs/core": "^2.9.2",
+    "angular-google-charts": "^2.2.1",
+    "angular-plotly.js": "^4.0.0",
     "bootstrap": "^4.6.0",
+    "chart.js": "^3.3.0",
     "jquery": "^3.6.0",
+    "ng-apexcharts": "^1.5.10",
+    "plotly.js": "^1.58.4",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

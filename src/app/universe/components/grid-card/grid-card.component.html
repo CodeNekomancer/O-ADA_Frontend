@@ -2,11 +2,14 @@
     <div *ngFor="let universe of universeList" class="card" routerLink="">
         <img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2020/12/oldest-galaxy-in-the-Universe.jpg" class="card-img-top" alt="sampleText">
         <div class="card-body">
+            <p class="adaCardTitle">
+                Servidor: {{universe.serverId}}
+            </p>
+            <hr class="adaCardSep">
             <p class="card-text">
-                Servidor: {{universe.serverId}} <br>
-                Eco: {{universe.speed}} <br>
+                Fields: {{universe.bonusFields}} <br>
                 Fleet: {{universe.speedFleet}} <br>
-                Fields: {{universe.bonusFields}}
+                Eco: {{universe.speed}}
             </p>
         </div>
     </div>

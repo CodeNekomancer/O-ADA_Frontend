@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { UAccViewComponent } from './components/uacc-view/uacc-view.component';
 
 const routes:Routes = [
   {
     path: '',
-    redirectTo:'home',
-    pathMatch:'full'
+    component: UAccViewComponent,
   },
   {
-
+    path:'home',
+    component: UAccViewComponent,
 	},
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'home',
+    component: UAccViewComponent
   }
 ]
 @NgModule({
     imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class UaccRoutingModule{}
+export class UaccRoutingModule { }

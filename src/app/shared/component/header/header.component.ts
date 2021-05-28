@@ -16,6 +16,9 @@ export class HeaderComponent implements OnInit {
   logOut(){
     localStorage.removeItem('oada-auth');
     this._router.navigate(['/'])
+  }
 
+  toContact() {
+    this._router.navigate(['/contact'])
   }
 }

@@ -9,7 +9,6 @@ export class AuthService {
 
   private BASEURL = environment.baseUrl;
   private authEndpoint = 'adacc/';
-  private registerEndpoint = 'adacc/add';
   constructor(private _http:HttpClient) { }
   login(user:any):Observable<any>{
     return this._http.post(`${this.BASEURL}${this.authEndpoint}login`, JSON.stringify(user))

@@ -15,5 +15,10 @@ export class UaccService {
   get(uacId:number):Observable<any>{
     return this._http.get<any>(`${this.Base_URL}${this.endpoint}get/sng/${uacId}`);
   }
-  
+
+  /*
+  getCelestialBodies(uacId:number):Observable<any>{
+    return this._http.get<any>(`${this.Base_URL}${this.endpoint}get/sng/${uacId}`);
+  }
+  */
 }
